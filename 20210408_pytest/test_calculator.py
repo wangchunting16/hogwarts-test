@@ -35,7 +35,7 @@ class TestCal:
         ['1','2','12'],  # 两个字符串相加
         [[1,2],[2,3],[1,2,2,3]],   # 数字列表相加
         [['abc', '123'], ['def', '456'], ['abc','123', 'def','456']]  # 字符列表相加
-    ],ids=['zero','int','float','minus','minus_float','int_float','int_max',
+    ],ids = ['zero','int','float','minus','minus_float','int_float','int_max',
            'bigint_max','string','num_list','string_list'])
     def test_add_valid(self,a,b,result):
         calc = Calculator()
@@ -53,7 +53,7 @@ class TestCal:
         [2.0, 3.0, 0.6666666666666666],  # 除不尽的浮点数被除数，16位小数
         [4294967295, 1, 4294967295],     # int的边界值
         [-9223372036854775807, 9223372036854775807, -1] # bigint的边界值
-    ],ids=['zero','int','float','minus','minus_float','int_float','irrational_int',
+    ],ids = ['zero','int','float','minus','minus_float','int_float','irrational_int',
            'irrational_float','int_max','bigint_max'])
     def test_div_valid(self,a,b,result):
         calc = Calculator()

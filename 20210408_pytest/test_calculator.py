@@ -27,7 +27,7 @@ class TestCal:
     def teardown(self):
         print("--单个用例结束--")
 
-    #
+    #测试加法的有效用例
     @pytest.mark.parametrize('a,b,result',[
         [0, 1, 1],       # 整数相加
         [0.0,0.1,0.1],   # 浮点数相加
@@ -44,7 +44,7 @@ class TestCal:
         calc = Calculator()
         assert  result == calc.add(a,b)
 
-
+    # 测试除法的有效用例
     @pytest.mark.parametrize('a,b,result',[
         [0,1,0],         # 整数相除
         [0.0,0.1,0.0],   # 浮点数相除

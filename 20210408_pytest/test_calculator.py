@@ -15,17 +15,11 @@ class Calculator:
 
 # 计算器测试类
 class TestCal:
-    def setup_class(self):
+    def setup(self):
         print("【开始计算】")
 
-    def teardown_class(self):
-        print("【计算结束】")
-
-    def setup(self):
-        print("--单个用例开始--")
-
     def teardown(self):
-        print("--单个用例结束--")
+        print("【计算结束】")
 
     #测试加法的有效用例
     @pytest.mark.parametrize('a,b,result',[

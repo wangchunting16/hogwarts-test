@@ -8,7 +8,7 @@ import yaml
 
 # 读取yaml存放的数据
 def getdata_div():
-    with open("datas/div1.yaml") as f:
+    with open("./datas/div1.yaml") as f:
         datas = yaml.safe_load(f)
     return datas
 

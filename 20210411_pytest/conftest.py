@@ -12,11 +12,10 @@ def init_class():
     yield calc
 
 
-
-
-
-# # fixture for div
-# @pytest.fixture(params=,ids=)
-# def div_case_1(request):
-#     return  request.param
-
+# 调整用例的顺序
+def pytest_collection_modifyitems(session,config,items:list):
+    items.reverse() #用例倒序执行
+    # 支持用例名中文编码输出
+    for item in items:
+        item.name = item.name.encode('utf-8').decode('unicode-escape')
+        item._nodeid = item.nodeid.encode('utf-8').decode('unicode-escape')

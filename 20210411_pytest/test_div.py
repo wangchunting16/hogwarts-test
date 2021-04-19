@@ -4,6 +4,7 @@ __time__ = '2021-04-11'
 """
 import pytest
 import yaml
+import allure
 
 
 # 读取yaml存放的数据
@@ -22,6 +23,7 @@ def div_case(request):
 # 计算器除法测试类
 class TestCal:
     # 调用fixture
+    @allure.story("相除")
     def test_div_num(self,init_class,div_case):
         try:
             assert div_case[2] == round(init_class.div(div_case[0], div_case[1]), 2)
